@@ -1,0 +1,36 @@
+- title: "Elements of Machine Learning"
+  subtitle: "Azim Premji University, Bhopal"
+  description: An introductory course for undergraduate students to expose them to parametric and non-parametric machine learning methods.
+  path: https://ayushbipinpatel.github.io/APU-Bhopal-DDD-jan2026-intor-statistical-learning/
+- title: "Web Scraping with R"
+  subtitle: "Azim Premji University, Bengaluru"
+  description: An applied workshop for postgraduate students to extract data from static and dynamic websites.
+  path: https://ayushbipinpatel.github.io/APU-blore-workshop-web-scraping/
+- title: "Designing and Programming Survey Forms"
+  subtitle: "Azim Premji University, Bengaluru"
+  description: Applied training for undergraduate students to use SurveyCTO to design and program survey forms.
+  path: https://ayushbipinpatel.github.io/APU-DDD-summer-school-2025/
+- title: "Data Visualization - A tour of favourite hits"
+  subtitle: "Artha Global"
+  description: A talk on good practices, taste, and common mistakes in data visualization.
+  path: https://ayushbipinpatel.github.io/Data-Viz-at-Artha/#/title-slide
+- title: "Business Analytics"
+  subtitle: "Gokhale Institute of Politics and Economics"
+  description: A course for postgraduate students covering intro to programming, literate programming, data visualization, regression, and classification methods.
+  path: https://ayushbipinpatel.github.io/GIPE-Business-Analytics/
+- title: "Advanced Analytics with R"
+  subtitle: "Gokhale Institute of Politics and Economics"
+  description: A course for undergraduate students to teach applications of regression, classification, resampling methods, regularization and multiple testing.
+  path: https://ayushbipinpatel.github.io/GIPE-UG-Advanced-Analytics-with-R/
+- title: "R for Data Analysis"
+  subtitle: "Juspay"
+  description: A course offered to employees at Juspay, ranging for engineers to product managers. The goal of the course was to train the participants in R programming for data analysis. The course covered fundamentals of R programming, writing functions, functional programming, literate programming, and RShiny framework.
+  path: https://ayushbipinpatel.github.io/R-for-Data-Analysis/
+- title: "Data Visualization"
+  subtitle: "International Indian Statistical Association Conference 2022, IISc Bengaluru"
+  description: A workshop on data visualization using the ideas of grammar of graphics via {ggplot2}.
+  path: https://ayushbipinpatel.github.io/iisa-2022-viz-workshop/
+- title: "Parameterized Reporting with R"
+  subtitle: "RLadies Bengaluru"
+  description: A talk on using quarto or Rmarkdown with {purrr} to generate parameterized reports.
+  path: https://ayushbipinpatel.github.io/ideal-chainsaw-purrr/

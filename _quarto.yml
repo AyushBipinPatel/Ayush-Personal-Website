@@ -1,0 +1,30 @@
+project:
+  type: website
+
+website:
+  title: "Ayush Patel"
+  google-analytics: "G-F0RB864XBN"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - training.qmd
+    right:
+      - icon: github
+        href: https://github.com/AyushBipinPatel
+      - icon: linkedin
+        href: https://www.linkedin.com/in/ayushbipinpatel/
+      - icon: envelope
+        href: "mailto:ayush.ap58@gmail.com"
+
+format:
+  html:
+    linestretch: 2
+    theme:
+      - lux
+      - brand
+    css: styles.css
+    toc: true
+
+
+

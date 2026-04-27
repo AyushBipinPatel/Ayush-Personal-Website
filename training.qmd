@@ -1,0 +1,13 @@
+---
+title: "Trainings"
+listing: 
+    contents: training.yml
+    type: table
+    fields: [title, subtitle, description]
+    field-display-names: 
+      subtitle: "Delivered At"
+      title: "Training"
+---
+
+I am a RStudio certified tidyverse instructor. I enjoy teaching data analysis skills using R. Here are some selected training/workshops/courses I have taught.
+
