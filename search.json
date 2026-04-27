@@ -1,0 +1,16 @@
+[
+  {
+    "objectID": "training.html",
+    "href": "training.html",
+    "title": "Trainings",
+    "section": "",
+    "text": "I am a RStudio certified tidyverse instructor. I enjoy teaching data analysis skills using R. Here are some selected training/workshops/courses I have taught.\n\n\n\n\n\n\n   \n    \n    \n      Order By\n      Default\n      \n        Training\n      \n      \n        Delivered At\n      \n      \n        Description\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nTraining\n\n\n\nDelivered At\n\n\n\nDescription\n\n\n\n\n\n\n\n\nElements of Machine Learning\n\n\nAzim Premji University, Bhopal\n\n\nAn introductory course for undergraduate students to expose them to parametric and non-parametric machine learning methods.\n\n\n\n\n\n\nWeb Scraping with R\n\n\nAzim Premji University, Bengaluru\n\n\nAn applied workshop for postgraduate students to extract data from static and dynamic websites.\n\n\n\n\n\n\nDesigning and Programming Survey Forms\n\n\nAzim Premji University, Bengaluru\n\n\nApplied training for undergraduate students to use SurveyCTO to design and program survey forms.\n\n\n\n\n\n\nData Visualization - A tour of favourite hits\n\n\nArtha Global\n\n\nA talk on good practices, taste, and common mistakes in data visualization.\n\n\n\n\n\n\nBusiness Analytics\n\n\nGokhale Institute of Politics and Economics\n\n\nA course for postgraduate students covering intro to programming, literate programming, data visualization, regression, and classification methods.\n\n\n\n\n\n\nAdvanced Analytics with R\n\n\nGokhale Institute of Politics and Economics\n\n\nA course for undergraduate students to teach applications of regression, classification, resampling methods, regularization and multiple testing.\n\n\n\n\n\n\nR for Data Analysis\n\n\nJuspay\n\n\nA course offered to employees at Juspay, ranging for engineers to product managers. The goal of the course was to train the participants in R programming for data analysis. The course covered fundamentals of R programming, writing functions, functional programming, literate programming, and RShiny framework.\n\n\n\n\n\n\nData Visualization\n\n\nInternational Indian Statistical Association Conference 2022, IISc Bengaluru\n\n\nA workshop on data visualization using the ideas of grammar of graphics via {ggplot2}.\n\n\n\n\n\n\nParameterized Reporting with R\n\n\nRLadies Bengaluru\n\n\nA talk on using quarto or Rmarkdown with {purrr} to generate parameterized reports.\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Hello!",
+    "section": "",
+    "text": "I am Ayush, an independent researcher interested in data, political economy, and development. My work spans experimental and non-experimental research, data analytics, and teaching data analysis skills. I am an adept R programmer with experience in developing web apps, reproducible workflows, and data pipelines.\nI am affiliated with the Oxford Poverty and Human Development Initiative as a Researcher. For OPHI, I built, and now maintain the Global Multidimensional Poverty Index databank.\nIf you share similar interests and want to collaborate on a project, feel free to reach out. I am also available for training or consultancy needs in areas related to data analysis, policy, and development."
+  }
+]
