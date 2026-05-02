@@ -1,21 +1,34 @@
 ---
-title: "Hello!"
+title: "Ayush Patel"
+about:
+  template: trestles         
+  image: img/img-profile-1.png
+  image-shape: rounded       
+  links:
+    - icon: github
+      text: GitHub
+      href: https://github.com/AyushBipinPatel
+    - icon: envelope
+      text: Email
+      href: mailto:ayush.ap58@gmail.com 
+    - icon: linkedin
+      text: Linkedin
+      href: https://www.linkedin.com/in ayushbipinpatel/  
 ---
+Independent researcher working at the intersection of data, political economy, and development.
+My work spans experimental and non-experimental methods, data analytics, and teaching.
 
-:::{layout-ncol="2" .column-page-inset}
+I am affiliated with the
+[Oxford Poverty and Human Development Initiative](https://ophi.org.uk/) (OPHI)
+as a Researcher, where I built and maintain the
+[Global Multidimensional Poverty Index databank](https://trainingidn.shinyapps.io/OPHIDataBankGlobalComparison/).
 
+If you share similar interests and want to collaborate, feel free to reach out.
+I am also available for training or consultancy in data analysis, policy, and development.
 
-:::{.column}
-![](img/img-profile-1.png)
-:::
-
-:::{.column}
-I am Ayush, an independent researcher interested in data, political economy, and development. My work spans experimental and non-experimental research, data analytics, and teaching data analysis skills. I am an adept R programmer with experience in developing web apps, reproducible workflows, and data pipelines. 
-
-I am affiliated with the [Oxford Poverty and Human Development Initiative](https://ophi.org.uk/) as a Researcher. For OPHI, I built, and now maintain the [Global Multidimensional Poverty Index databank](https://trainingidn.shinyapps.io/OPHIDataBankGlobalComparison/).
-
-If you share similar interests and want to collaborate on a project, feel free to reach out. I am also available for training or consultancy needs in areas related to data analysis, policy, and development.
-:::
-
-
-:::
+<!-- Skill tags — these use the .skill-tag class defined in custom.scss -->
+<span class="skill-tag">R / tidyverse</span>
+<span class="skill-tag">RStudio certified</span>
+<span class="skill-tag">Causal inference</span>
+<span class="skill-tag">Data visualisation</span>
+<span class="skill-tag">Open to collaborations</span>

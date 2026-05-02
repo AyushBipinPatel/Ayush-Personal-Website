@@ -3,28 +3,55 @@ project:
 
 website:
   title: "Ayush Patel"
+  open-graph: true
+  twitter-card: true
   google-analytics: "G-F0RB864XBN"
   navbar:
     left:
       - href: index.qmd
         text: Home
-      - training.qmd
+      - href: training.qmd
+        text: Trainings
     right:
       - icon: github
         href: https://github.com/AyushBipinPatel
+        aria-label: GitHub
       - icon: linkedin
         href: https://www.linkedin.com/in/ayushbipinpatel/
       - icon: envelope
         href: "mailto:ayush.ap58@gmail.com"
+    pinned: false
+    background: light
+  page-footer: 
+    left: "© Ayush Patel"
+    right:
+      - text: "Built with Quarto"
+        href: https://quarto.org
+  sidebar: false
 
 format:
   html:
     linestretch: 2
     theme:
-      - lux
-      - brand
-    css: styles.css
+      light: [lux, custom.scss]       
+      dark:  [lux, custom-dark.scss]  
     toc: true
+    toc-location: left
+    toc-depth: 3
+    toc-title: "Contents"
+    code-copy: true
+    code-overflow: wrap
+    code-fold: false
+    smooth-scroll: true
+    link-external-icon: false
+    link-external-newwindow: true
+    number-sections: false
+    fig-responsive: true
+    html-math-method: katex   # lighter than MathJax; fine for most stats notation
+execute:
+  freeze: auto               # only re-render when source changes
+  cache: true
+
 
 
 

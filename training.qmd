@@ -1,13 +1,144 @@
 ---
 title: "Trainings"
-listing: 
-    contents: training.yml
-    type: table
-    fields: [title, subtitle, description]
-    field-display-names: 
-      subtitle: "Delivered At"
-      title: "Training"
 ---
 
-I am a RStudio certified tidyverse instructor. I enjoy teaching data analysis skills using R. Here are some selected training/workshops/courses I have taught.
+I am an RStudio certified tidyverse instructor.
+I enjoy teaching data analysis skills using R.
+Here are some selected trainings, workshops, and courses I have taught.
+
+::: {.training-card}
+::: {.training-card-year}
+2026
+:::
+::: {.training-card-title}
+[Elements of Machine Learning](https://ayushbipinpatel.github.io/APU-Bhopal-DDD-jan2026-intor-statistical-learning/)
+:::
+::: {.training-card-venue}
+Azim Premji University, Bhopal
+:::
+::: {.training-card-desc}
+An introductory course for undergraduate students covering parametric and non-parametric machine learning methods.
+:::
+:::
+
+::: {.training-card}
+::: {.training-card-year}
+2025
+:::
+::: {.training-card-title}
+[Web Scraping with R](https://ayushbipinpatel.github.io/APU-blore-workshop-web-scraping/)
+:::
+::: {.training-card-venue}
+Azim Premji University, Bengaluru
+:::
+::: {.training-card-desc}
+An applied workshop for postgraduate students on extracting data from static and dynamic websites.
+:::
+:::
+
+::: {.training-card}
+::: {.training-card-year}
+2025
+:::
+::: {.training-card-title}
+[Designing and Programming Survey Forms](https://ayushbipinpatel.github.io/APU-DDD-summer-school-2025/)
+:::
+::: {.training-card-venue}
+Azim Premji University, Bengaluru
+:::
+::: {.training-card-desc}
+Applied training for undergraduate students to use SurveyCTO to design and program survey forms.
+:::
+:::
+
+::: {.training-card}
+::: {.training-card-year}
+2024
+:::
+::: {.training-card-title}
+[Data Visualization — A tour of favourite hits](https://ayushbipinpatel.github.io/Data-Viz-at-Artha/#/title-slide)
+:::
+::: {.training-card-venue}
+Artha Global
+:::
+::: {.training-card-desc}
+A talk on good practices, taste, and common mistakes in data visualization.
+:::
+:::
+
+::: {.training-card}
+::: {.training-card-year}
+2023
+:::
+::: {.training-card-title}
+[Business Analytics](https://ayushbipinpatel.github.io/GIPE-Business-Analytics/)
+:::
+::: {.training-card-venue}
+Gokhale Institute of Politics and Economics
+:::
+::: {.training-card-desc}
+A course for postgraduate students covering intro to programming, literate programming, data visualization, regression, and classification methods.
+:::
+:::
+
+::: {.training-card}
+::: {.training-card-year}
+2023
+:::
+::: {.training-card-title}
+[Advanced Analytics with R](https://ayushbipinpatel.github.io/GIPE-UG-Advanced-Analytics-with-R/)
+:::
+::: {.training-card-venue}
+Gokhale Institute of Politics and Economics
+:::
+::: {.training-card-desc}
+A course for undergraduate students covering regression, classification, resampling methods, regularization, and multiple testing.
+:::
+:::
+
+::: {.training-card}
+::: {.training-card-year}
+2022
+:::
+::: {.training-card-title}
+[R for Data Analysis](https://ayushbipinpatel.github.io/R-for-Data-Analysis/)
+:::
+::: {.training-card-venue}
+Juspay
+:::
+::: {.training-card-desc}
+A course for employees ranging from engineers to product managers, covering R fundamentals, functional programming, literate programming, and RShiny.
+:::
+:::
+
+::: {.training-card}
+::: {.training-card-year}
+2022
+:::
+::: {.training-card-title}
+[Data Visualization](https://ayushbipinpatel.github.io/iisa-2022-viz-workshop/)
+:::
+::: {.training-card-venue}
+International Indian Statistical Association Conference, IISc Bengaluru
+:::
+::: {.training-card-desc}
+A workshop on data visualization using the grammar of graphics via {ggplot2}.
+:::
+:::
+
+::: {.training-card}
+::: {.training-card-year}
+2022
+:::
+::: {.training-card-title}
+[Parameterized Reporting with R](https://ayushbipinpatel.github.io/ideal-chainsaw-purrr/)
+:::
+::: {.training-card-venue}
+RLadies Bengaluru
+:::
+::: {.training-card-desc}
+A talk on using Quarto or R Markdown with {purrr} to generate parameterized reports.
+:::
+:::
+
 

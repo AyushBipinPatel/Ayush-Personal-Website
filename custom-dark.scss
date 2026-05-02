@@ -1,0 +1,131 @@
+/*-- scss:defaults --*/
+
+// ─── Dark mode palette ────────────────────────────────────────────────────────
+// These override the light-mode values when dark theme is active in Quarto.
+// Wire up in _quarto.yml:
+//   theme:
+//     light: [lux, custom.scss]
+//     dark:  [lux, custom-dark.scss]
+
+$brand-green:     #97C459;          // lighter green on dark bg — stays accessible
+$brand-green-lt:  #1e3a0d;          // dark green fill
+$brand-ink:       #e0d9ce;          // warm off-white text
+$brand-stone:     #16140f;          // near-black warm bg
+$brand-muted:     #7a7568;
+$brand-border:    #2e2c27;
+$brand-border-lt: #252320;
+
+$body-bg:         $brand-stone;
+$body-color:      $brand-ink;
+$link-color:      $brand-green;
+$link-hover-color: lighten($brand-green, 8%);
+
+$navbar-bg:       #1c1a17;
+$navbar-fg:       $brand-muted;
+$navbar-hl:       $brand-green;
+
+$code-bg:         #1e1c18;
+$code-block-bg:   #1e1c18;
+$code-color:      #c8c0b0;
+
+$table-border-color: $brand-border;
+$table-hover-bg:     $brand-green-lt;
+
+$callout-color-note: $brand-green;
+
+
+/*-- scss:rules --*/
+
+// Navbar border
+.navbar {
+  border-bottom: 0.5px solid $brand-border;
+}
+
+.navbar-brand {
+  color: $brand-ink !important;
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:hover {
+  color: $brand-green !important;
+  border-bottom-color: $brand-green;
+}
+
+// Article body text on dark
+.quarto-document-content p,
+.quarto-document-content li,
+.quarto-document-content blockquote {
+  color: #c0bab0;
+}
+
+.quarto-document-content h2 {
+  border-bottom-color: $brand-border;
+  color: $brand-ink;
+}
+
+.quarto-document-content h3 {
+  color: $brand-muted;
+}
+
+// Callouts on dark
+div.callout-note {
+  border-left-color: $brand-green !important;
+  background: $brand-green-lt !important;
+
+  .callout-header { color: $brand-green; }
+  .callout-body p { color: lighten($brand-green, 10%); }
+}
+
+.callout-stat {
+  border-left-color: $brand-green;
+  background: $brand-green-lt;
+  color: lighten($brand-green, 8%);
+}
+
+// Tables on dark
+.quarto-document-content table {
+  th {
+    background: $brand-green-lt;
+    color: $brand-green;
+    border-bottom-color: $brand-green;
+  }
+  td {
+    border-bottom-color: $brand-border;
+    color: $brand-ink;
+  }
+  tr:hover td { background: $brand-green-lt; }
+}
+
+// Training cards on dark
+.training-card {
+  border-color: $brand-border;
+  background: #1c1a17;
+
+  &:hover {
+    border-color: lighten($brand-border, 10%);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.25);
+  }
+
+  .training-card-title a { color: $brand-green; }
+  .training-card-venue   { color: $brand-muted; }
+  .training-card-desc    { color: #9c9a8a; }
+  .training-card-year    { background: $brand-green-lt; color: $brand-green; }
+}
+
+// Tags
+.skill-tag {
+  background: $brand-green-lt;
+  color: $brand-green;
+}
+
+.quarto-category {
+  color: $brand-green;
+  &::after { color: $brand-border; }
+}
+
+// Footer
+.nav-footer {
+  border-top-color: $brand-border;
+  background: $brand-stone;
+  color: $brand-muted;
+}

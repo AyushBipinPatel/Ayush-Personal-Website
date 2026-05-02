@@ -33,18 +33,20 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-a31f11c73aa7cce87483b4d1f61786e3.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-c3eeaaf93832a902063cbaf5d4bd970d.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-a31f11c73aa7cce87483b4d1f61786e3.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-506a7decd4e1956d0d6f16918ff92a43.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-b1a24b7c9dc09a597048c2bbd312bee2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-22481e0981e8d86e3f36f558fae859a5.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-b1a24b7c9dc09a597048c2bbd312bee2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -72,35 +74,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-subtitle','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-title-sort'] }],
-      
-      searchColumns: ["listing-title","listing-subtitle","listing-description"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-F0RB864XBN"></script>
 
 <script type="text/javascript">
@@ -110,41 +83,180 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-F0RB864XBN', { 'anonymize_ip': true});
 </script>
+<style>html{ scroll-behavior: smooth; }</style>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
+<meta property="og:title" content="Trainings – Ayush Patel">
+<meta property="og:description" content="">
+<meta property="og:site_name" content="Ayush Patel">
+<meta name="twitter:title" content="Trainings – Ayush Patel">
+<meta name="twitter:description" content="">
+<meta name="twitter:card" content="summary">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="floating nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -172,7 +284,7 @@ window.Quarto = {
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/AyushBipinPatel"> <i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/AyushBipinPatel"> <i class="bi bi-github" role="img" aria-label="GitHub">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -189,6 +301,7 @@ window.Quarto = {
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
       </div> <!-- /container-fluid -->
     </nav>
@@ -196,12 +309,16 @@ window.Quarto = {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
+
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -222,177 +339,152 @@ window.Quarto = {
 </header>
 
 
-<p>I am a RStudio certified tidyverse instructor. I enjoy teaching data analysis skills using R. Here are some selected training/workshops/courses I have taught.</p>
-
-
-
-
-<div class="quarto-listing quarto-listing-container-table" id="listing-listing">
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-    <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-    <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-      <option value="" disabled="" selected="" hidden="">Order By</option>
-      <option value="index" data-direction="asc">Default</option>
-      <option value="listing-title-sort" data-direction="asc">
-        Training
-      </option>
-      <option value="listing-subtitle" data-direction="asc">
-        Delivered At
-      </option>
-      <option value="listing-description" data-direction="asc">
-        Description
-      </option>
-    </select>
-  </div>
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
-    </div>
+<p>I am an RStudio certified tidyverse instructor. I enjoy teaching data analysis skills using R. Here are some selected trainings, workshops, and courses I have taught.</p>
+<div class="training-card">
+<div class="training-card-year">
+<p>2026</p>
 </div>
-<table class="quarto-listing-table table">
-<thead>
-<tr>
+<div class="training-card-title">
+<p><a href="https://ayushbipinpatel.github.io/APU-Bhopal-DDD-jan2026-intor-statistical-learning/">Elements of Machine Learning</a></p>
+</div>
+<div class="training-card-venue">
+<p>Azim Premji University, Bhopal</p>
+</div>
+<div class="training-card-desc">
+<p>An introductory course for undergraduate students covering parametric and non-parametric machine learning methods.</p>
+</div>
+</div>
+<div class="training-card">
+<div class="training-card-year">
+<p>2025</p>
+</div>
+<div class="training-card-title">
+<p><a href="https://ayushbipinpatel.github.io/APU-blore-workshop-web-scraping/">Web Scraping with R</a></p>
+</div>
+<div class="training-card-venue">
+<p>Azim Premji University, Bengaluru</p>
+</div>
+<div class="training-card-desc">
+<p>An applied workshop for postgraduate students on extracting data from static and dynamic websites.</p>
+</div>
+</div>
+<div class="training-card">
+<div class="training-card-year">
+<p>2025</p>
+</div>
+<div class="training-card-title">
+<p><a href="https://ayushbipinpatel.github.io/APU-DDD-summer-school-2025/">Designing and Programming Survey Forms</a></p>
+</div>
+<div class="training-card-venue">
+<p>Azim Premji University, Bengaluru</p>
+</div>
+<div class="training-card-desc">
+<p>Applied training for undergraduate students to use SurveyCTO to design and program survey forms.</p>
+</div>
+</div>
+<div class="training-card">
+<div class="training-card-year">
+<p>2024</p>
+</div>
+<div class="training-card-title">
+<p><a href="https://ayushbipinpatel.github.io/Data-Viz-at-Artha/#/title-slide">Data Visualization — A tour of favourite hits</a></p>
+</div>
+<div class="training-card-venue">
+<p>Artha Global</p>
+</div>
+<div class="training-card-desc">
+<p>A talk on good practices, taste, and common mistakes in data visualization.</p>
+</div>
+</div>
+<div class="training-card">
+<div class="training-card-year">
+<p>2023</p>
+</div>
+<div class="training-card-title">
+<p><a href="https://ayushbipinpatel.github.io/GIPE-Business-Analytics/">Business Analytics</a></p>
+</div>
+<div class="training-card-venue">
+<p>Gokhale Institute of Politics and Economics</p>
+</div>
+<div class="training-card-desc">
+<p>A course for postgraduate students covering intro to programming, literate programming, data visualization, regression, and classification methods.</p>
+</div>
+</div>
+<div class="training-card">
+<div class="training-card-year">
+<p>2023</p>
+</div>
+<div class="training-card-title">
+<p><a href="https://ayushbipinpatel.github.io/GIPE-UG-Advanced-Analytics-with-R/">Advanced Analytics with R</a></p>
+</div>
+<div class="training-card-venue">
+<p>Gokhale Institute of Politics and Economics</p>
+</div>
+<div class="training-card-desc">
+<p>A course for undergraduate students covering regression, classification, resampling methods, regularization, and multiple testing.</p>
+</div>
+</div>
+<div class="training-card">
+<div class="training-card-year">
+<p>2022</p>
+</div>
+<div class="training-card-title">
+<p><a href="https://ayushbipinpatel.github.io/R-for-Data-Analysis/">R for Data Analysis</a></p>
+</div>
+<div class="training-card-venue">
+<p>Juspay</p>
+</div>
+<div class="training-card-desc">
+<p>A course for employees ranging from engineers to product managers, covering R fundamentals, functional programming, literate programming, and RShiny.</p>
+</div>
+</div>
+<div class="training-card">
+<div class="training-card-year">
+<p>2022</p>
+</div>
+<div class="training-card-title">
+<p><a href="https://ayushbipinpatel.github.io/iisa-2022-viz-workshop/">Data Visualization</a></p>
+</div>
+<div class="training-card-venue">
+<p>International Indian Statistical Association Conference, IISc Bengaluru</p>
+</div>
+<div class="training-card-desc">
+<p>A workshop on data visualization using the grammar of graphics via {ggplot2}.</p>
+</div>
+</div>
+<div class="training-card">
+<div class="training-card-year">
+<p>2022</p>
+</div>
+<div class="training-card-title">
+<p><a href="https://ayushbipinpatel.github.io/ideal-chainsaw-purrr/">Parameterized Reporting with R</a></p>
+</div>
+<div class="training-card-venue">
+<p>RLadies Bengaluru</p>
+</div>
+<div class="training-card-desc">
+<p>A talk on using Quarto or R Markdown with {purrr} to generate parameterized reports.</p>
+</div>
+</div>
 
-<th>
-<a class="sort" data-sort="listing-title-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Training</a>
-</th>
 
-<th>
-<a class="sort" data-sort="listing-subtitle" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Delivered At</a>
-</th>
 
-<th>
-<a class="sort" data-sort="listing-description" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Description</a>
-</th>
-
-</tr>
-</thead>
-<tbody class="list">
-
-<tr data-index="0" data-listing-title-sort="Elements of Machine Learning">
-<td>
-<a href="https://ayushbipinpatel.github.io/APU-Bhopal-DDD-jan2026-intor-statistical-learning/" class="title listing-title">Elements of Machine Learning</a>
-</td>
-<td>
-<span class="listing-subtitle">Azim Premji University, Bhopal</span>
-</td>
-<td>
-<span class="listing-description">An introductory course for undergraduate students to expose them to parametric and non-parametric machine learning methods.</span>
-</td>
-
-</tr>
-
-<tr data-index="1" data-listing-title-sort="Web Scraping with R">
-<td>
-<a href="https://ayushbipinpatel.github.io/APU-blore-workshop-web-scraping/" class="title listing-title">Web Scraping with R</a>
-</td>
-<td>
-<span class="listing-subtitle">Azim Premji University, Bengaluru</span>
-</td>
-<td>
-<span class="listing-description">An applied workshop for postgraduate students to extract data from static and dynamic websites.</span>
-</td>
-
-</tr>
-
-<tr data-index="2" data-listing-title-sort="Designing and Programming Survey Forms">
-<td>
-<a href="https://ayushbipinpatel.github.io/APU-DDD-summer-school-2025/" class="title listing-title">Designing and Programming Survey Forms</a>
-</td>
-<td>
-<span class="listing-subtitle">Azim Premji University, Bengaluru</span>
-</td>
-<td>
-<span class="listing-description">Applied training for undergraduate students to use SurveyCTO to design and program survey forms.</span>
-</td>
-
-</tr>
-
-<tr data-index="3" data-listing-title-sort="Data Visualization - A tour of favourite hits">
-<td>
-<a href="https://ayushbipinpatel.github.io/Data-Viz-at-Artha/#/title-slide" class="title listing-title">Data Visualization - A tour of favourite hits</a>
-</td>
-<td>
-<span class="listing-subtitle">Artha Global</span>
-</td>
-<td>
-<span class="listing-description">A talk on good practices, taste, and common mistakes in data visualization.</span>
-</td>
-
-</tr>
-
-<tr data-index="4" data-listing-title-sort="Business Analytics">
-<td>
-<a href="https://ayushbipinpatel.github.io/GIPE-Business-Analytics/" class="title listing-title">Business Analytics</a>
-</td>
-<td>
-<span class="listing-subtitle">Gokhale Institute of Politics and Economics</span>
-</td>
-<td>
-<span class="listing-description">A course for postgraduate students covering intro to programming, literate programming, data visualization, regression, and classification methods.</span>
-</td>
-
-</tr>
-
-<tr data-index="5" data-listing-title-sort="Advanced Analytics with R">
-<td>
-<a href="https://ayushbipinpatel.github.io/GIPE-UG-Advanced-Analytics-with-R/" class="title listing-title">Advanced Analytics with R</a>
-</td>
-<td>
-<span class="listing-subtitle">Gokhale Institute of Politics and Economics</span>
-</td>
-<td>
-<span class="listing-description">A course for undergraduate students to teach applications of regression, classification, resampling methods, regularization and multiple testing.</span>
-</td>
-
-</tr>
-
-<tr data-index="6" data-listing-title-sort="R for Data Analysis">
-<td>
-<a href="https://ayushbipinpatel.github.io/R-for-Data-Analysis/" class="title listing-title">R for Data Analysis</a>
-</td>
-<td>
-<span class="listing-subtitle">Juspay</span>
-</td>
-<td>
-<span class="listing-description">A course offered to employees at Juspay, ranging for engineers to product managers. The goal of the course was to train the participants in R programming for data analysis. The course covered fundamentals of R programming, writing functions, functional programming, literate programming, and RShiny framework.</span>
-</td>
-
-</tr>
-
-<tr data-index="7" data-listing-title-sort="Data Visualization">
-<td>
-<a href="https://ayushbipinpatel.github.io/iisa-2022-viz-workshop/" class="title listing-title">Data Visualization</a>
-</td>
-<td>
-<span class="listing-subtitle">International Indian Statistical Association Conference 2022, IISc Bengaluru</span>
-</td>
-<td>
-<span class="listing-description">A workshop on data visualization using the ideas of grammar of graphics via {ggplot2}.</span>
-</td>
-
-</tr>
-
-<tr data-index="8" data-listing-title-sort="Parameterized Reporting with R">
-<td>
-<a href="https://ayushbipinpatel.github.io/ideal-chainsaw-purrr/" class="title listing-title">Parameterized Reporting with R</a>
-</td>
-<td>
-<span class="listing-subtitle">RLadies Bengaluru</span>
-</td>
-<td>
-<span class="listing-description">A talk on using quarto or Rmarkdown with {purrr} to generate parameterized reports.</span>
-</td>
-
-</tr>
-
-</tbody>
-</table>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
     const icon = "";
     const anchorJS = new window.AnchorJS();
     anchorJS.options = {
@@ -464,7 +556,7 @@ window.Quarto = {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/AyushBipinPatel\.github\.io\/Ayush-Personal-Website\/");
+        var filterRegex = new RegExp('/' + window.location.host + '/');
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
@@ -478,6 +570,11 @@ window.Quarto = {
           if (link.dataset.originalHref !== undefined) {
             link.href = link.dataset.originalHref;
           }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
         }
       }
     function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
@@ -792,8 +889,28 @@ window.Quarto = {
   });
   </script>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© Ayush Patel</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="https://quarto.org">
+<p>Built with Quarto</p>
+</a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
 
 
 
 
+<script src="site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>
