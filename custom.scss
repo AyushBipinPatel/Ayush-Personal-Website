@@ -1,20 +1,19 @@
 /*-- scss:defaults --*/
 
 // ─── 1. Palette ───────────────────────────────────────────────────────────────
-// Define your named colours here. Everything else references these.
-$brand-green:     #3B6D11;
-$brand-green-lt:  #EAF3DE;
-$brand-green-md:  #639922;
-$brand-ink:       #1c1a17;
-$brand-stone:     #fafaf7;
-$brand-muted:     #7a7568;
-$brand-border:    #e0d9ce;
-$brand-border-lt: #f0ece4;
+$brand-accent:    #2c2c2a;          // deep charcoal — links, active states, headings
+$brand-accent-lt: #f1efeb;          // very light warm grey — tag fills, callout bg
+$brand-accent-md: #5f5e5a;          // mid charcoal — hover, secondary accent
+$brand-ink:       #1c1a17;          // near-black warm body text
+$brand-stone:     #fafaf7;          // off-white warm page background
+$brand-muted:     #7a7568;          // secondary / meta text
+$brand-border:    #e0dcd4;          // warm light border
+$brand-border-lt: #edeae4;          // even lighter border
 
 // ─── 2. Bootstrap / Quarto core variables ─────────────────────────────────────
-$primary:                   $brand-green;
-$link-color:                $brand-green;
-$link-hover-color:          darken($brand-green, 10%);
+$primary:                   $brand-accent;
+$link-color:                $brand-accent;
+$link-hover-color:          $brand-accent-md;
 
 $body-bg:                   $brand-stone;
 $body-color:                $brand-ink;
@@ -23,46 +22,43 @@ $font-family-sans-serif:    "Inter", "Nunito Sans", system-ui, -apple-system, sa
 $font-family-serif:         "Lora", "Georgia", serif;
 $font-family-monospace:     "JetBrains Mono", "Fira Code", "Courier New", monospace;
 
-$font-size-base:            1rem;          // 16px
-$line-height-base:          1.75;          // Lux default is 1.5 — more air for reading
-$headings-font-weight:      500;           // Lux uses 700 — lighter reads more editorial
+$font-size-base:            1rem;
+$line-height-base:          1.75;
+$headings-font-weight:      500;
 $headings-color:            $brand-ink;
 $headings-line-height:      1.25;
 
 // ─── 3. Navbar ────────────────────────────────────────────────────────────────
 $navbar-bg:                 #ffffff;
 $navbar-fg:                 $brand-muted;
-$navbar-hl:                 $brand-green;  // hover / active link colour
+$navbar-hl:                 $brand-accent;
 
 // ─── 4. Code blocks ───────────────────────────────────────────────────────────
 $code-bg:                   #f4f2ee;
 $code-color:                $brand-ink;
 $code-block-bg:             #f4f2ee;
-$code-block-border-left:    $brand-green;
+$code-block-border-left:    $brand-accent;
 $code-block-border-left-size: 3px;
 
 // ─── 5. Tables ────────────────────────────────────────────────────────────────
 $table-border-color:        $brand-border;
-$table-hover-bg:            $brand-green-lt;
+$table-hover-bg:            $brand-accent-lt;
 
 // ─── 6. Callouts ──────────────────────────────────────────────────────────────
-$callout-color-note:        $brand-green;
-$callout-color-tip:         $brand-green-md;
+$callout-color-note:        $brand-accent;
+$callout-color-tip:         $brand-accent-md;
 
 
 /*-- scss:rules --*/
 
 // ─── 7. Google Fonts import ───────────────────────────────────────────────────
-// Add this to _quarto.yml instead if you prefer:
-//   include-in-header: fonts.html
-// But SCSS @import works too:
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Lora:ital,wght@0,400;0,500;1,400&family=JetBrains+Mono:wght@400;500&display=swap');
 
 
 // ─── 8. Navbar refinements ────────────────────────────────────────────────────
 .navbar {
   border-bottom: 0.5px solid $brand-border;
-  box-shadow: none;               // Lux adds a shadow — remove it
+  box-shadow: none;
 }
 
 .navbar-brand {
@@ -71,26 +67,23 @@ $callout-color-tip:         $brand-green-md;
   color: $brand-ink !important;
 }
 
-// Active nav link gets a green underline indicator instead of a filled pill
 .navbar-nav .nav-link.active,
 .navbar-nav .nav-link:hover {
-  color: $brand-green !important;
-  border-bottom: 1.5px solid $brand-green;
+  color: $brand-accent !important;
+  border-bottom: 1.5px solid $brand-accent;
   padding-bottom: 2px;
 }
 
 
 // ─── 9. Homepage / about layout ───────────────────────────────────────────────
-// If using Quarto's about: trestles or jolla template
 .about-entity .about-image {
-  border-radius: 10px;            // softer than the Lux circle crop
+  border-radius: 10px;
 }
 
-// Skill / interest tags (add these manually in index.qmd using spans with .skill-tag)
 .skill-tag {
   display: inline-block;
-  background: $brand-green-lt;
-  color: $brand-green;
+  background: $brand-accent-lt;
+  color: $brand-accent;
   font-size: 0.75rem;
   padding: 2px 10px;
   border-radius: 999px;
@@ -100,8 +93,6 @@ $callout-color-tip:         $brand-green-md;
 
 
 // ─── 10. Training cards ───────────────────────────────────────────────────────
-// Use these classes in training.qmd when you switch from the default table
-// to a manual listing. See training.qmd snippet for usage.
 .training-card {
   border: 0.5px solid $brand-border;
   border-radius: 8px;
@@ -116,9 +107,8 @@ $callout-color-tip:         $brand-green-md;
 
   .training-card-title a {
     font-weight: 500;
-    color: $brand-green;
+    color: $brand-accent;
     text-decoration: none;
-
     &:hover { text-decoration: underline; }
   }
 
@@ -136,8 +126,8 @@ $callout-color-tip:         $brand-green-md;
 
   .training-card-year {
     float: right;
-    background: $brand-green-lt;
-    color: $brand-green;
+    background: $brand-accent-lt;
+    color: $brand-accent-md;
     font-size: 0.72rem;
     font-weight: 500;
     padding: 1px 8px;
@@ -148,18 +138,16 @@ $callout-color-tip:         $brand-green-md;
 
 
 // ─── 11. Blog article reading experience ──────────────────────────────────────
-// Constrain prose width for comfortable reading (~68 characters)
 .quarto-document-content p,
 .quarto-document-content li,
 .quarto-document-content blockquote {
   max-width: 68ch;
-  font-family: $font-family-serif;   // serif for long-form body text
+  font-family: $font-family-serif;
   font-size: 1.0rem;
   line-height: 1.8;
-  color: #3a3830;                    // slightly softer than pure $brand-ink
+  color: #3a3830;
 }
 
-// Section headings in articles — thinner weight with a subtle rule
 .quarto-document-content h2 {
   font-weight: 500;
   font-size: 1.25rem;
@@ -176,11 +164,10 @@ $callout-color-tip:         $brand-green-md;
   margin-top: 1.5rem;
 }
 
-// Article category / kicker labels  (uses Quarto's built-in .quarto-category)
 .quarto-category {
   font-size: 0.72rem;
   font-weight: 500;
-  color: $brand-green;
+  color: $brand-accent-md;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   text-decoration: none;
@@ -197,35 +184,32 @@ $callout-color-tip:         $brand-green-md;
 
 
 // ─── 12. Callout blocks ───────────────────────────────────────────────────────
-// Override Quarto's default blue callouts with brand green
 div.callout-note {
-  border-left: 3px solid $brand-green !important;
-  background: $brand-green-lt !important;
+  border-left: 3px solid $brand-accent !important;
+  background: $brand-accent-lt !important;
 
-  .callout-header { color: $brand-green; font-weight: 500; }
-  .callout-body p { color: darken($brand-green, 5%); max-width: 100%; }
+  .callout-header { color: $brand-accent; font-weight: 500; }
+  .callout-body p { color: $brand-accent; max-width: 100%; }
 }
 
 div.callout-tip {
-  border-left: 3px solid $brand-green-md !important;
-  background: lighten($brand-green-lt, 3%) !important;
+  border-left: 3px solid $brand-accent-md !important;
+  background: lighten($brand-accent-lt, 2%) !important;
 }
 
-// Stat callout — add class="callout-stat" in qmd for highlighted key numbers
 .callout-stat {
-  border-left: 3px solid $brand-green;
-  background: $brand-green-lt;
+  border-left: 3px solid $brand-accent;
+  background: $brand-accent-lt;
   padding: 0.6rem 1rem;
   border-radius: 0 6px 6px 0;
   font-family: $font-family-sans-serif;
   font-size: 0.88rem;
-  color: darken($brand-green, 5%);
+  color: $brand-accent;
   margin: 1rem 0;
 }
 
 
-// ─── 13. Figures and tables in articles ───────────────────────────────────────
-// Figures should be allowed to be wider than the 68ch prose column
+// ─── 13. Figures and tables ───────────────────────────────────────────────────
 .quarto-figure,
 .quarto-document-content figure,
 .quarto-document-content .cell-output {
@@ -239,18 +223,17 @@ div.callout-tip {
   margin-top: 0.4rem;
 }
 
-// Tables in articles
 .quarto-document-content table {
   font-size: 0.85rem;
   border-collapse: collapse;
   width: 100%;
-  max-width: 100%;           // allow to be wider than prose column
+  max-width: 100%;
 
   th {
-    background: $brand-green-lt;
-    color: $brand-green;
+    background: $brand-accent-lt;
+    color: $brand-accent;
     font-weight: 500;
-    border-bottom: 1.5px solid $brand-green;
+    border-bottom: 1.5px solid $brand-accent;
     padding: 0.5rem 0.75rem;
     text-align: left;
   }
@@ -261,9 +244,7 @@ div.callout-tip {
     color: $brand-ink;
   }
 
-  tr:hover td {
-    background: $brand-green-lt;
-  }
+  tr:hover td { background: $brand-accent-lt; }
 }
 
 
@@ -273,15 +254,4 @@ div.callout-tip {
   background: $brand-stone;
   font-size: 0.8rem;
   color: $brand-muted;
-}
-
-
-// ─── 15. Dark mode overrides ──────────────────────────────────────────────────
-// Quarto's dark mode is triggered by adding a second theme in _quarto.yml.
-// These rules apply when the user has switched to dark or prefers it.
-// See _quarto.yml for how to wire this up.
-@media (prefers-color-scheme: dark) {
-  // These only fire if you are NOT using Quarto's built-in dark theme toggle.
-  // If you use theme: [lux, custom.scss] + theme-dark: [lux, custom-dark.scss]
-  // put these overrides in custom-dark.scss instead.
 }
