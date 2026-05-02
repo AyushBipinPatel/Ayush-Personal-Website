@@ -160,7 +160,7 @@ window.Quarto = {
 };
 </script>
 
-<meta property="og:title" content="Random Musings – Ayush Patel">
+<link rel="alternate" type="application/rss+xml" title="Ayush Patel" href="blog-index.xml" data-external="1"><meta property="og:title" content="Random Musings – Ayush Patel">
 <meta property="og:site_name" content="Ayush Patel">
 <meta name="twitter:title" content="Random Musings – Ayush Patel">
 <meta name="twitter:card" content="summary">
@@ -563,7 +563,7 @@ Ayush Patel
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/AyushBipinPatel\.github\.io\/Ayush-Personal-Website\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
