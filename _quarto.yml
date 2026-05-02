@@ -12,6 +12,8 @@ website:
         text: Home
       - href: training.qmd
         text: Trainings
+      - href: blog-index.qmd
+        text: Blog
     right:
       - icon: github
         href: https://github.com/AyushBipinPatel

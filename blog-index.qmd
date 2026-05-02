@@ -1,0 +1,12 @@
+---
+title: "Random Musings"
+listing:
+  contents: posts            # Quarto auto-discovers all .qmd files in posts/
+  sort: "date desc"
+  type: default              # try: grid, table, default
+  categories: true           # renders category filter chips
+  sort-ui: true
+  filter-ui: false
+  feed: true                 # generates an RSS feed at blog/index.xml
+page-layout: full
+---

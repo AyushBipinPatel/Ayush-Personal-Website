@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Trainings – Ayush Patel</title>
+<title>Random Musings – Ayush Patel</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -33,6 +33,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -74,6 +76,35 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-F0RB864XBN"></script>
 
 <script type="text/javascript">
@@ -85,12 +116,53 @@ gtag('config', 'G-F0RB864XBN', { 'anonymize_ip': true});
 </script>
 <style>html{ scroll-behavior: smooth; }</style>
 
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
 
-<meta property="og:title" content="Trainings – Ayush Patel">
-<meta property="og:description" content="">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<meta property="og:title" content="Random Musings – Ayush Patel">
 <meta property="og:site_name" content="Ayush Patel">
-<meta name="twitter:title" content="Trainings – Ayush Patel">
-<meta name="twitter:description" content="">
+<meta name="twitter:title" content="Random Musings – Ayush Patel">
 <meta name="twitter:card" content="summary">
 </head>
 
@@ -278,11 +350,11 @@ gtag('config', 'G-F0RB864XBN', { 'anonymize_ip': true});
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./training.html" aria-current="page"> 
+    <a class="nav-link" href="./training.html"> 
 <span class="menu-text">Trainings</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./blog-index.html"> 
+    <a class="nav-link active" href="./blog-index.html" aria-current="page"> 
 <span class="menu-text">Blog</span></a>
   </li>  
 </ul>
@@ -311,27 +383,25 @@ gtag('config', 'G-F0RB864XBN', { 'anonymize_ip': true});
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    
-</nav>
+  
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-    </div>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(1)</span></div><div class="category" data-category="RGF0YQ==">Data <span class="quarto-category-count">(1)</span></div><div class="category" data-category="RWxlY3Rpb25z">Elections <span class="quarto-category-count">(1)</span></div><div class="category" data-category="SW5kaWE=">India <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content column-page-left" id="quarto-document-content">
 
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Trainings</h1>
+<h1 class="title">Random Musings</h1>
 </div>
 
 
 
-<div class="quarto-title-meta">
+<div class="quarto-title-meta column-page-left">
 
     
   
@@ -343,137 +413,70 @@ gtag('config', 'G-F0RB864XBN', { 'anonymize_ip': true});
 </header>
 
 
-<p>I am an RStudio certified tidyverse instructor. I enjoy teaching data analysis skills using R. Here are some selected trainings, workshops, and courses I have taught.</p>
-<div class="training-card">
-<div class="training-card-year">
-<p>2026</p>
-</div>
-<div class="training-card-title">
-<p><a href="https://ayushbipinpatel.github.io/APU-Bhopal-DDD-jan2026-intor-statistical-learning/">Elements of Machine Learning</a></p>
-</div>
-<div class="training-card-venue">
-<p>Azim Premji University, Bhopal</p>
-</div>
-<div class="training-card-desc">
-<p>An introductory course for undergraduate students covering parametric and non-parametric machine learning methods.</p>
-</div>
-</div>
-<div class="training-card">
-<div class="training-card-year">
-<p>2025</p>
-</div>
-<div class="training-card-title">
-<p><a href="https://ayushbipinpatel.github.io/APU-blore-workshop-web-scraping/">Web Scraping with R</a></p>
-</div>
-<div class="training-card-venue">
-<p>Azim Premji University, Bengaluru</p>
-</div>
-<div class="training-card-desc">
-<p>An applied workshop for postgraduate students on extracting data from static and dynamic websites.</p>
-</div>
-</div>
-<div class="training-card">
-<div class="training-card-year">
-<p>2025</p>
-</div>
-<div class="training-card-title">
-<p><a href="https://ayushbipinpatel.github.io/APU-DDD-summer-school-2025/">Designing and Programming Survey Forms</a></p>
-</div>
-<div class="training-card-venue">
-<p>Azim Premji University, Bengaluru</p>
-</div>
-<div class="training-card-desc">
-<p>Applied training for undergraduate students to use SurveyCTO to design and program survey forms.</p>
-</div>
-</div>
-<div class="training-card">
-<div class="training-card-year">
-<p>2024</p>
-</div>
-<div class="training-card-title">
-<p><a href="https://ayushbipinpatel.github.io/Data-Viz-at-Artha/#/title-slide">Data Visualization — A tour of favourite hits</a></p>
-</div>
-<div class="training-card-venue">
-<p>Artha Global</p>
-</div>
-<div class="training-card-desc">
-<p>A talk on good practices, taste, and common mistakes in data visualization.</p>
-</div>
-</div>
-<div class="training-card">
-<div class="training-card-year">
-<p>2023</p>
-</div>
-<div class="training-card-title">
-<p><a href="https://ayushbipinpatel.github.io/GIPE-Business-Analytics/">Business Analytics</a></p>
-</div>
-<div class="training-card-venue">
-<p>Gokhale Institute of Politics and Economics</p>
-</div>
-<div class="training-card-desc">
-<p>A course for postgraduate students covering intro to programming, literate programming, data visualization, regression, and classification methods.</p>
-</div>
-</div>
-<div class="training-card">
-<div class="training-card-year">
-<p>2023</p>
-</div>
-<div class="training-card-title">
-<p><a href="https://ayushbipinpatel.github.io/GIPE-UG-Advanced-Analytics-with-R/">Advanced Analytics with R</a></p>
-</div>
-<div class="training-card-venue">
-<p>Gokhale Institute of Politics and Economics</p>
-</div>
-<div class="training-card-desc">
-<p>A course for undergraduate students covering regression, classification, resampling methods, regularization, and multiple testing.</p>
-</div>
-</div>
-<div class="training-card">
-<div class="training-card-year">
-<p>2022</p>
-</div>
-<div class="training-card-title">
-<p><a href="https://ayushbipinpatel.github.io/R-for-Data-Analysis/">R for Data Analysis</a></p>
-</div>
-<div class="training-card-venue">
-<p>Juspay</p>
-</div>
-<div class="training-card-desc">
-<p>A course for employees ranging from engineers to product managers, covering R fundamentals, functional programming, literate programming, and RShiny.</p>
-</div>
-</div>
-<div class="training-card">
-<div class="training-card-year">
-<p>2022</p>
-</div>
-<div class="training-card-title">
-<p><a href="https://ayushbipinpatel.github.io/iisa-2022-viz-workshop/">Data Visualization</a></p>
-</div>
-<div class="training-card-venue">
-<p>International Indian Statistical Association Conference, IISc Bengaluru</p>
-</div>
-<div class="training-card-desc">
-<p>A workshop on data visualization using the grammar of graphics via {ggplot2}.</p>
-</div>
-</div>
-<div class="training-card">
-<div class="training-card-year">
-<p>2022</p>
-</div>
-<div class="training-card-title">
-<p><a href="https://ayushbipinpatel.github.io/ideal-chainsaw-purrr/">Parameterized Reporting with R</a></p>
-</div>
-<div class="training-card-venue">
-<p>RLadies Bengaluru</p>
-</div>
-<div class="training-card-desc">
-<p>A talk on using Quarto or R Markdown with {purrr} to generate parameterized reports.</p>
-</div>
-</div>
 
 
 
-</main> <!-- /main -->
+
+<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+    <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+    <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+      <option value="" disabled="" selected="" hidden="">Order By</option>
+      <option value="index" data-direction="asc">Default</option>
+      <option value="listing-title" data-direction="asc">
+        Title
+      </option>
+      <option value="listing-date-sort" data-direction="asc">
+        Date - Oldest
+      </option>
+      <option value="listing-date-sort" data-direction="desc">
+        Date - Newest
+      </option>
+      <option value="listing-author" data-direction="asc">
+        Author
+      </option>
+    </select>
+  </div>
+</div>
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-categories="RGF0YSUyQ0VsZWN0aW9ucyUyQ0luZGlh" data-listing-date-sort="1776623400000" data-listing-file-modified-sort="1777733118371" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="28" data-listing-word-count-sort="5542">
+<div class="thumbnail"><a href="./posts/2026-05-02-Election-candidate-assets-declaration/index.html" class="no-external">
+
+<p class="card-img-top"><img loading='lazy' src="posts\2026-05-02-Election-candidate-assets-declaration\index_files\figure-html\fig-instances-of-errors-overall-1.png"  class="thumbnail-image card-img"/></p>
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/2026-05-02-Election-candidate-assets-declaration/index.html" class="no-external">Discrepancies in asset declaration records of election candidates</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('RGF0YQ=='); return false;">Data</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('RWxlY3Rpb25z'); return false;">Elections</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('SW5kaWE='); return false;">India</div>
+
+</div>
+<div class="delink listing-description"><a href="./posts/2026-05-02-Election-candidate-assets-declaration/index.html" class="no-external">
+<p>An exploration of declared assets of Lok Sabha 2024 Election candidates.</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="./posts/2026-05-02-Election-candidate-assets-declaration/index.html" class="no-external">
+<div class="listing-date">
+Apr 20, 2026
+</div>
+<div class="listing-author">
+Ayush Patel
+</div>
+</a>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">No matching items</div>
+</div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
